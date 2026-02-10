@@ -1,13 +1,12 @@
 import React from "react"
-import Button from "./components/button"
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/pages/home";
 const App = () => {
   return (
-    <div className="bg-amber-400 h-screen w-full flex items-center justify-center">
-      <Button variant="danger" size="md">
-        Click Me
-      </Button>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/dashboard" element={<h1>Dashboard</h1>} />
+    </Routes>
   )
 }
 
